@@ -27,6 +27,11 @@ class Calculatrice:
     def modulo(self,a,b): #reste de la division de a par b
         return a%b
     
+    def racine_carre(self,a):
+        if a<0:
+            raise ValueError("a ne peut pas être négatif.")
+        return math.sqrt(a)
+    
 
 
          
