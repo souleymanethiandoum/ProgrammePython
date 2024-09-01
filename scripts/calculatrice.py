@@ -32,6 +32,29 @@ class Calculatrice:
             raise ValueError("a ne peut pas être négatif.")
         return math.sqrt(a)
     
+    def somme_n_premiers_entiers(self,n):
+        som=0
+        for i in range(n+1):
+            som=som+i
+        return   som 
+    
+    def somme_n_premiers_while(selt,n):
+        som=0
+        i=1
+        while i <= n:
+            som = i + som
+            i = i + 1
+        return som    
+
+    def singne(self,n):
+        if n > 0:
+            print("n est positif")
+        elif n < 0 :
+            print(" n est négatif") 
+        else:
+            print("n est zéro")       
+
+
 
 
          
