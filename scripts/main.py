@@ -9,9 +9,12 @@ def main():
     # som_n=calc.somme_n_premiers_entiers(9)
     # print(f'la somme des entiers est  {som_n}')
     # calc.singne(-0)
-    print(calc.fonction_valeur_absoluevaleur_absolue(-44))
-     
-     
+    print(calc.fonction_valeur_absolue(-44))
+    log=calc.fonction_logarithm(2)
+    print(f'le logarithm est néperien  {log}')
+    base=calc.fonction_logarithm_a_base(2,10)
+    print(f'le logarithm est à base  {base}') 
+
 
 
 if __name__ == "__main__":     

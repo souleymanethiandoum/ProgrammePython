@@ -60,6 +60,21 @@ class Calculatrice:
             return x 
         else:
             return -x
+        
+    def fonction_logarithm(sel,x):
+        if x <= 0 :
+            raise ValueError("logarith de zéro n'est pas permise  zéro non permise.")
+        else:
+            return math.log(x) #logarith à base e
+        
+    def fonction_logarithm_a_base(sel,x,base):
+        if x <= 0 :
+            raise ValueError("logarith de zéro n'est pas permise  zéro non permise.")
+        else:
+            return math.log(x,base)    # renvoie le logarithme de x dans la base spécifiée.
+        
+
+
             
             
 
