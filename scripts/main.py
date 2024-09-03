@@ -9,7 +9,7 @@ def main():
     # som_n=calc.somme_n_premiers_entiers(9)
     # print(f'la somme des entiers est  {som_n}')
     # calc.singne(-0)
-    print(calc.valeur_absolue(-44))
+    print(calc.fonction_valeur_absoluevaleur_absolue(-44))
      
      
 

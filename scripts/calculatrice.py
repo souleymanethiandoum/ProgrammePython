@@ -55,7 +55,7 @@ class Calculatrice:
             print("n est zéro")       
 
     
-    def valeur_absolue(self,x):
+    def fonction_valeur_absolue(self,x):
         if x > 0:
             return x 
         else:
