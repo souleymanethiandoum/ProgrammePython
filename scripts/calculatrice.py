@@ -72,7 +72,15 @@ class Calculatrice:
             raise ValueError("logarith de zéro n'est pas permise  zéro non permise.")
         else:
             return math.log(x,base)    # renvoie le logarithme de x dans la base spécifiée.
+
+    def Air_du_disque(self,rayon): # l'air d'un disque de rayon r connu
+        Air = math.pi*rayon
+        return Air    
         
+    def Volume_du_conne(self,hauteur, rayon): # volume du conne sachant la hauteur et le rayon sont connus
+        V = (hauteur*math.pi*rayon)/3
+        return V
+
 
 
             

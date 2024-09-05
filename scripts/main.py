@@ -14,6 +14,11 @@ def main():
     print(f'le logarithm est néperien  {log}')
     base=calc.fonction_logarithm_a_base(2,10)
     print(f'le logarithm est à base  {base}') 
+    A = calc.Air_du_disque(2)
+    print(f'lair du disque est   {A}')
+    V = calc.Volume_du_conne(2,1)
+    print(f'le volume du conne est   {V}')
+
 
 
 
