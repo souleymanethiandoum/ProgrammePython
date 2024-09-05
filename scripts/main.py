@@ -18,6 +18,15 @@ def main():
     print(f'lair du disque est   {A}')
     V = calc.Volume_du_conne(2,1)
     print(f'le volume du conne est   {V}')
+    jeu=calc.Jeu()
+    dé,gain=jeu
+    print(dé,gain)
+    mult=calc.multiple(10000)
+    print( f'le nombre de multiple est {mult}')
+    mult=calc.multiple_gen(13,23,10000)
+    print( f'le nombre de multiple dans le cas gen  est {mult}')
+
+
 
 
 

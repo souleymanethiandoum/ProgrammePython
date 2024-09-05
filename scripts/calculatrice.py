@@ -1,4 +1,5 @@
 import math 
+import random
 
 class Calculatrice:
     def __init__(self) -> None:
@@ -81,9 +82,38 @@ class Calculatrice:
         V = (hauteur*math.pi*rayon)/3
         return V
 
+    #Exempe :    On lance un dé à six faces. Si le dé affiche un chiffre supérieur où égal à 5, 
+    #on gagne. Dans le cas contraire, on perd. Le programme va simuler le lancer,affiché le resultat
+    #  et préciser si on a perdu ou gagné
 
 
-            
+    def Jeu(self):
+        dé=random.randint(1,6)       # randint(a,b) permet de generer des entiers aléatoire entre a et b. 
+        if dé > 5:
+            a='gagné'
+        else :
+            a='perdu'
+        return (dé,a)  
+
+    #Exemple : Je veux un petit programme qui renvoi le nombre de multiple de 13 et de 23 entre 1 et 10000    
+
+    def multiple(self,n): 
+        C = 0
+        for i in range(1,n+1):
+            if i%13==0 and i%23==0:
+                C=C+1
+        return C  
+    #Exemple : Je veux un petit programme qui renvoi le nombre de multiple de 13 et de 23 entre 1 et 10000
+    def multiple_gen(self,a,b,n): 
+        C = 0
+        for i in range(1,n+1):
+            if i%a==0 and i%b==0:
+                C=C+1
+        return C  
+
+          
+
+         
             
 
 
