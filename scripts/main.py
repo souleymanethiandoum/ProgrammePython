@@ -31,13 +31,14 @@ def main():
     # print( f'le nombre de multiple est {mult}')
     # mult=calc.multiple_gen(13,23,10000)
     # print( f'le nombre de multiple dans le cas gen  est {mult}')
-    mat=col.matrice_remplie_de(10,30,0)
-    print(mat)
-    mat_inf0=col.matrice_diag_inf_0(3,3,1,1)
-    print(mat_inf0)
-    mat_inf1=col.matrice_diag_inf_1(3,3,1,1)
-    print(mat_inf1)
-
+    # mat=col.matrice_remplie_de(10,30,0)
+    # print(mat)
+    # mat_inf0=col.matrice_diag_inf_0(3,3,1,1)
+    # print(mat_inf0)
+    # mat_inf1=col.matrice_diag_inf_1(3,3,1,1)
+    # print(mat_inf1)
+    mat_sup1 = col.matrice_diag_sup_1(5,5,4,1)
+    print(mat_sup1)
 
 
 
