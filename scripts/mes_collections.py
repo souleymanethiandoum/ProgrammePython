@@ -5,16 +5,17 @@ class Mes_collections:
         pass
     
 # Collections Python (tableaux)
-# Il existe quatre types de données de collection dans le langage de programmation Python :
-         
-#    1)La liste est une collection ordonnée et modifiable. Elle autorise les membres en double.
-#    2)Tuple est une collection ordonnée et immuable(inchangeable) . Autorise les membres en double.
-#    3)Un ensemble est une collection non ordonnée, non modifiable* et non indexée. Aucun membre en double.
-#    4)Le dictionnaire est une collection ordonnée** et modifiable. Aucun membre en double.
+    # Il existe quatre types de données de collection dans le langage de programmation Python :
+            
+    #    1)La liste est une collection ordonnée et modifiable. Elle autorise les membres en double.
+    #    2)Tuple est une collection ordonnée et immuable(inchangeable) . Autorise les membres en double.
+    #    3)Un ensemble est une collection non ordonnée, non modifiable* et non indexée. Aucun membre en double.
+    #    4)Le dictionnaire est une collection ordonnée** et modifiable. Aucun membre en double.
 
+#Les liste 
 
- #fusion deux listes: il y a plusieurs  methodes pour le faire (opération direct L2+L1 ou ajour élement par elemnt avec append())
- # On peux utliser extend() qui permet d'ajouter toute type collection dans la liste
+    #fusion deux listes: il y a plusieurs  methodes pour le faire (opération direct L2+L1 ou ajour élement par elemnt avec append())
+    # On peux utliser extend() qui permet d'ajouter toute type collection dans la liste
 
 
     def fusion_lis_app(self,L2,L1):
@@ -36,9 +37,9 @@ class Mes_collections:
     
            
 
-#On rappelle que l'indexation des matrice commence par 0 en python c-à-d le premier element est de M
-# est M[0,0] l'lement situé à la ligne 2 et a la colonne 3 est M[1,2]
-    #Creer une matrice  de taille nxm remplie de d'une valeur
+    #On rappelle que l'indexation des matrice commence par 0 en python c-à-d le premier element est de M
+    # est M[0,0] l'lement situé à la ligne 2 et a la colonne 3 est M[1,2]
+        #Creer une matrice  de taille nxm remplie de d'une valeur
 
     def matrice_remplie_de(self, m,n,valeur):
         return np.full((m, n), valeur)
@@ -54,7 +55,7 @@ class Mes_collections:
             C_0[i, i-1] = mu0 / (beta0 * s + mu0) # [i,i-1] Ici on rempli la diagonal inférieur
         return C_0
     
-    #matrice diagonal inférieur 
+   #matrice diagonal inférieur 
     def matrice_diag_inf_1(self,m,n, mu1, beta1):
         for s in range(0, n+1):
           taille = n + m - s
@@ -86,8 +87,22 @@ class Mes_collections:
                 D_1[i, i+1] = mu1 * s / (beta1 * s + mu1)# [i,i+1] Ici on rempli la diagonal supérieur
         return D_1  
     
-    #les tuples compréhension
-        
+#les set (ou ensemble )
+        # Il est également possible d'utiliser le constructeur set((a,b,c)) pour créer un ensemble ou {a,b,c}.
+        #Pour ajouter des éléments d’un autre ensemble à l’ensemble actuel, utilisez la ""update()"" méthode.
+        #Ajouter des éléments depuis tropicaldans thisset voici le syntax ""thisset.update(tropical)""
+        #L'objet dans la update()méthode n'a pas besoin d'être un ensemble, il peut s'agir de n'importe quel objet itérable (tuples, listes, dictionnaires, etc.).
+   
+
+  #Fonction qui retourne toutes les opérations ensemblistes (union, intersection,...)
+    def operation_ensemblist(self,A,B):
+       Union = A | B
+       Intersect = A & B
+       Priv = A - B #L’ensemble renvoyé contient des éléments qui existent uniquement dans le premier ensemble,
+                                  #et non dans les deux ensembles on note (A/B).
+       diff_sym = A ^ B  # C'est la réunion des élements qui ne sont pas  la fois dans A  et dans B
+       #A = set.update(A,B)  #La méthode update() insère les éléments de l'ensemble B dans l'ensemble A
+       return Union, Intersect, Priv,diff_sym                      
 
     
           
