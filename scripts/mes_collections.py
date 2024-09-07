@@ -3,6 +3,38 @@ import numpy as np
 class Mes_collections: 
     def __init__(self) -> None:
         pass
+    
+# Collections Python (tableaux)
+# Il existe quatre types de données de collection dans le langage de programmation Python :
+         
+#    1)La liste est une collection ordonnée et modifiable. Elle autorise les membres en double.
+#    2)Tuple est une collection ordonnée et immuable(inchangeable) . Autorise les membres en double.
+#    3)Un ensemble est une collection non ordonnée, non modifiable* et non indexée. Aucun membre en double.
+#    4)Le dictionnaire est une collection ordonnée** et modifiable. Aucun membre en double.
+
+
+ #fusion deux listes: il y a plusieurs  methodes pour le faire (opération direct L2+L1 ou ajour élement par elemnt avec append())
+ # On peux utliser extend() qui permet d'ajouter toute type collection dans la liste
+
+
+    def fusion_lis_app(self,L2,L1):
+       for x in L1:
+         L2 = np.append(L2,x) #Append modifie L2 directement
+       return L2       #Retourner la liste fusionnée
+    
+    def fusion_list_app_concat(self,L1,C):
+       L1 = np.append(L1,C)                #np.append retourne un nouveau tableau avec C ajouté à L1 on pouvez utiliser aussi np.concatenate
+       return L1
+
+
+   #Produit matriciel entre deux matrice
+   #on note que si on a des vecteur ligne ceci devient un produit sclaire entre deux vecteur
+
+    def produit_matr(self,A,B):  #le nombre de collone de A doit être égal au nombre de ligne de B
+       prod_mat=np.dot(A,B)
+       return prod_mat
+    
+           
 
 #On rappelle que l'indexation des matrice commence par 0 en python c-à-d le premier element est de M
 # est M[0,0] l'lement situé à la ligne 2 et a la colonne 3 est M[1,2]
@@ -53,6 +85,8 @@ class Mes_collections:
                               #l'ement situé à la position (taille-1,taille-1) et sarreter à l'element (taille-1,taille-2)
                 D_1[i, i+1] = mu1 * s / (beta1 * s + mu1)# [i,i+1] Ici on rempli la diagonal supérieur
         return D_1  
+    
+    #les tuples compréhension
         
 
     

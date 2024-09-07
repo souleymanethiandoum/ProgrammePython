@@ -1,5 +1,6 @@
 import calculatrice
 import mes_collections
+ 
 
 def main():
     calc = calculatrice.Calculatrice()     #on mets le modul aprés la class pour pouvoir utilisé simplement "calc"
@@ -31,15 +32,31 @@ def main():
     # print( f'le nombre de multiple est {mult}')
     # mult=calc.multiple_gen(13,23,10000)
     # print( f'le nombre de multiple dans le cas gen  est {mult}')
-    # mat=col.matrice_remplie_de(10,30,0)
+    # mat=col.matrice_remplie_de(10,30,1)
     # print(mat)
     # mat_inf0=col.matrice_diag_inf_0(3,3,1,1)
     # print(mat_inf0)
     # mat_inf1=col.matrice_diag_inf_1(3,3,1,1)
     # print(mat_inf1)
-    mat_sup1 = col.matrice_diag_sup_1(5,5,4,1)
-    print(mat_sup1)
+    # mat_sup1 = col.matrice_diag_sup_1(5,5,4,1)
+    # print(mat_sup1)
+    
+    # fus_app=col.fusion_lis_app(["a","b","c"],[1,2,3,4])
+    # print(fus_app)
+    # fus_conc=col.fusion_list_app_concat(["a","b","c"],[1,2,3])
+    # print(fus_conc)
+    A = list([[1, 2, 3, 4],
+              [5, 6, 7, 8],
+              [9, 10, 11, 12],
+              [13, 14, 15, 16]])
+    print(A)
 
+    B = list([[16, 15, 14, 13],
+              [12, 11, 10, 9],
+              [8, 7, 6, 5],
+              [4, 3, 2, 1]])
+    prod_mat = col.produit_matr (A,B)
+    print(f'le produit matriciel entre entre A et B est {prod_mat} ')
 
 
 
