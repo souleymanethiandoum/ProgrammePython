@@ -1,11 +1,14 @@
 import calculatrice
 import mes_collections
- 
+import data_collection
 
 def main():
     calc = calculatrice.Calculatrice()     #on mets le modul aprés la class pour pouvoir utilisé simplement "calc"
     col = mes_collections.Mes_collections() # on mets le modul aprés la class pour pouvoir utilisé simplement "col"
-
+    liste=[1,2]
+    data = data_collection.DataCollections(liste)
+    data.Ajouter_un_elmt_liste(3)
+    print(f'affiche la liste{data.liste}')
 
         
 
@@ -51,18 +54,18 @@ def main():
     #           [13, 14, 15, 16]])
     # print(A)
 
-    # B = list([[16, 15, 14, 13],
-    #           [12, 11, 10, 9],
-    #           [8, 7, 6, 5],
-    #           [4, 3, 2, 1]])
-    # prod_mat = col.produit_matr (A,B)
-    # print(f'le produit matriciel entre entre A et B est {prod_mat} ')
-    A= {"a","b","e",2,3}
-    print(A)
-    B={"e","f","a",3}
-    print(B)
-    U,I,P,D=col.operation_ensemblist(A,B)
-    print(f'les oprération sont : {U}, {I}, {P},{D}')
+    # # B = list([[16, 15, 14, 13],
+    # #           [12, 11, 10, 9],
+    # #           [8, 7, 6, 5],
+    # #           [4, 3, 2, 1]])
+    # # prod_mat = col.produit_matr (A,B)
+    # # print(f'le produit matriciel entre entre A et B est {prod_mat} ')
+    # A= {"a","b","e",2,3}
+    # print(A)
+    # B={"e","f","a",3}
+    # print(B)
+    # U,I,P,D=col.operation_ensemblist(A,B)
+    # print(f'les oprération sont : {U}, {I}, {P},{D}')
 
     # print(f'les oprération sont : A uninion B est égal à :{U}, Intersection entre A et  B est égal à : {I}, 
     #       A privé de B est égal à{P}, La différence de symétrique entre A et B est égal à : {D}')
