@@ -3,13 +3,28 @@ import mes_collections
 import data_collection
 
 def main():
+    #Creation d'un objet sans variable 
     calc = calculatrice.Calculatrice()     #on mets le modul aprés la class pour pouvoir utilisé simplement "calc"
     col = mes_collections.Mes_collections() # on mets le modul aprés la class pour pouvoir utilisé simplement "col"
+    #creation d'un objet avec une variable 
     liste=[1,2]
-    data = data_collection.DataCollections(liste)
-    data.Ajouter_un_elmt_liste(3)
-    print(f'affiche la liste{data.liste}')
+    dictionnaire_eleve={"Nom": "Thiandoum", "Classe": "3eme", "Village": "Mbayard"}
+    data = data_collection.DataCollections(liste,dictionnaire_eleve) 
+    data.afficher_dict()
+    print()
+    data.Ajout_un_elmt_dict("prenom","Souleymane")
+    data.afficher_dict()
+    dict_elev=list(data.dictionnaire.items())
+    print(f'le premier elment de notre dictionnaire est :{dict_elev[0]}')
+    data.dictionnaire["Classe"]="seconde"
+    print(f'dara.dictionnaire est : {data.dictionnaire.items()}')
 
+    #creation d'un objet avec deux variable 
+    # data = data_collection.DataCollections(liste,dictionnaire) 
+    # data.Ajouter_un_elmt_liste(3)
+    # print(f'affiche la liste avec lajour {data.liste}') # pour afficher l'attribu on fait objet.nom_de_lattribut
+    # data.supprimer_un_elmt_liste(2)
+    # print(f'affiche la liste supprimer {data.liste}')
         
 
     # # add = calc.addition(2,9)
